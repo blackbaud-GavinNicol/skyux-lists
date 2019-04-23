@@ -2,7 +2,7 @@
   "name": "@skyux/lists",
   "version": "3.2.1",
   "description": "SKY UX Lists",
-  "main": "bundles/bundle.umd.js",
+  "main": "dist/bundles/bundle.umd.js",
   "module": "index.ts",
   "scripts": {
     "build": "skyux build-public-library",
