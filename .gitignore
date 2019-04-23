@@ -23,7 +23,7 @@ jspm_packages
 .srctmp
 
 # SKY UX build directory
-dist
+# dist
 
 # SKY UX visual directory
 screenshots-baseline-local

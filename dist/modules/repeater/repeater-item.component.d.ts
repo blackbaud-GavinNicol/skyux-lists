@@ -1,0 +1,34 @@
+import { ChangeDetectorRef, EventEmitter, OnDestroy, TemplateRef } from '@angular/core';
+import { SkyCheckboxChange } from '@skyux/forms/modules/checkbox/checkbox.component';
+import { SkyLogService } from '@skyux/core/modules/log/log.service';
+import { SkyRepeaterService } from './repeater.service';
+import { SkyInlineFormCloseArgs } from '@skyux/inline-form';
+import { SkyInlineFormConfig } from '@skyux/inline-form';
+export declare class SkyRepeaterItemComponent implements OnDestroy {
+    private repeaterService;
+    private changeDetector;
+    private logService;
+    contentId: string;
+    isExpanded: boolean;
+    isSelected: boolean;
+    showInlineForm: boolean;
+    inlineFormConfig: SkyInlineFormConfig;
+    inlineFormTemplate: TemplateRef<any>;
+    inlineFormClose: EventEmitter<SkyInlineFormCloseArgs>;
+    selectable: boolean;
+    collapse: EventEmitter<void>;
+    expand: EventEmitter<void>;
+    slideDirection: string;
+    isCollapsible: boolean;
+    private _isCollapsible;
+    private _isExpanded;
+    private _isSelected;
+    constructor(repeaterService: SkyRepeaterService, changeDetector: ChangeDetectorRef, logService: SkyLogService);
+    ngOnDestroy(): void;
+    headerClick(): void;
+    chevronDirectionChange(direction: string): void;
+    updateForExpanded(value: boolean, animate: boolean): void;
+    updateIsSelected(value: SkyCheckboxChange): void;
+    onInlineFormClose(inlineFormCloseArgs: SkyInlineFormCloseArgs): void;
+    private slideForExpanded(animate);
+}

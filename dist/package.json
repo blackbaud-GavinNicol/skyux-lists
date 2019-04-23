@@ -3,7 +3,7 @@
   "version": "3.2.1",
   "description": "SKY UX Lists",
   "main": "bundles/bundle.umd.js",
-  "module": "index.ts",
+  "module": "index.js",
   "scripts": {
     "build": "skyux build-public-library",
     "skyux": "skyux",
